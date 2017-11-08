@@ -1,0 +1,53 @@
+query{
+ me{
+  id,
+  email
+}
+}
+--------------------------------
+query{
+ me{
+  id,
+  emailAddress
+}
+}
+---------------------------------
+query{
+ me{
+  id,
+  email: emailAddress
+}
+}
+-------------------------------
+{
+  projects {
+    id
+    title
+  }
+}
+----------------------------------
+{
+  projects {
+    id
+    title
+    user{
+      id
+      emailAddress
+    }
+  }
+}
+------------------------------------
+{
+  me{
+    id
+    emailAddress
+  }
+  x:projects {
+    id
+    title
+    user{
+      id
+      emailAddress
+    }
+  }
+}
